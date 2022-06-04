@@ -25,6 +25,13 @@ defmodule HelloPhoenixWeb.Router do
     resources "/users", UserController
     resources "/posts", PostController, only: [:index, :show]
     resources "/comments", CommentController, except: [:delete]
+    resources "/reviews", ReviewController
+  end
+
+  scope "/admin", HelloPhoenixWeb, as: :admin do
+    pipe_through :browser
+
+    resources "/reviews", ReviewController
   end
 
   # Other scopes may use custom stacks.
