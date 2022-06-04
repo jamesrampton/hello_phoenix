@@ -1,3 +1,5 @@
 <section class="phx-hero">
     <h2>Hello world, from <%= @messenger %>!</h2>
+    <%= link "Welcome page!", to: Routes.page_path(@conn, :index) %>
+    <%= link "Hello page!", to: Routes.hello_path(@conn, :index) %>
 </section>
