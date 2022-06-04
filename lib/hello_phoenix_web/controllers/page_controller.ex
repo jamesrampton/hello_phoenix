@@ -4,6 +4,8 @@ defmodule HelloPhoenixWeb.PageController do
   plug HelloPhoenixWeb.Plugs.Locale, "de"
 
   def index(conn, _params) do
-    render(conn, "index.html")
+    conn
+    |> put_root_layout("admin.html")
+    |> render("index.html")
   end
 end
