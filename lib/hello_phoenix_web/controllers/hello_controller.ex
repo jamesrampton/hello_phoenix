@@ -8,6 +8,13 @@ defmodule HelloPhoenixWeb.HelloController do
   end
 
   def show(conn, %{"messenger" => messenger}) do
+    # plain text response
+    # text(conn, "From messenger #{messenger}")
+    # json response
+    # json(conn, %{id: messenger})
+    # html response - unsafe?
+    # html(conn, "<h1>From messenger #{messenger}</h1>")
+    # proper Phoenix view response
     render(conn, "show.html", messenger: messenger)
   end
 end
