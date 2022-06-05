@@ -7,4 +7,8 @@ defmodule HelloPhoenixWeb.PageView do
     <p>You live in <%= assigns.country %></p>
     """
   end
+
+  def render("index.html", assigns) do
+    "rendering with assigns #{inspect(Map.keys(assigns))}"
+  end
 end
