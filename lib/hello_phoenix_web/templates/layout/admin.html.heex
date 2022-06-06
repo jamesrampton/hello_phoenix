@@ -23,6 +23,7 @@
         <p>Administration</p>
       </section>
     </header>
+    <%= Phoenix.View.render(HelloPhoenixWeb.PageView, "test.html", message: "Hello from the layout!") %>
     <%= @inner_content %>
   </body>
 </html>
